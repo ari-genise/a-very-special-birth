@@ -1,0 +1,56 @@
+def greet(bot_name, birthday):
+    print('Hello! My name is ' + bot_name + '.')
+    print('I was created on ' + birthday + '.')  # today lol
+
+def remind_name():
+    print('Please, remind me your name.')
+    name = input()
+    print('What a great name you have, ' + name + '!')
+
+def guess_age():
+    print('Let me guess your age.')
+    print('Enter the modulus of your age by 3, 5 and 7.')
+
+    rem3 = int(input())
+    rem5 = int(input())
+    rem7 = int(input())
+    age = (rem3 * 70 + rem5 * 21 + rem7 * 15) % 105
+
+    print("Your age is " + str(age) + "; that's a good time to start programming!")
+
+def count():
+    print('I love counting! Will you give me a number to count to?')
+
+    num = int(input())
+    curr = 0
+    while curr <= num:
+        print(curr, '!')
+        curr += 1
+
+def test():
+    print("Oh! Let's play a trvia game!")
+    
+    right_answers = ['4', '4.', 'd', 'D']
+    print("""What's my favorite color?
+    1. Red (basic)
+    2. Boring Blue
+    3. Orange (ew!)
+    4. HEX #dceff2""")
+    user_answer = False
+    
+    while user_answer == False:
+        if input('> ') in right_answers == False:
+            print('So close! Try again!')
+        user_answer = True
+        print("Yay! I've never played Trivia before. I hope I did it right...")
+        
+def end():
+    print('Congratulations, have a nice day!')
+
+
+greet('Yuna', '10/172022')
+remind_name()
+guess_age()
+count()
+test()
+end()
